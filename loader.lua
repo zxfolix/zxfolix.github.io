@@ -1,10 +1,6 @@
 --[[
-    KongerHub
+    gay version of kongerhub
 ]]
-
-setfpscap(10000)
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/wtfplayer/redemption/main/Webhook.lua"))()
 
 local gameLinks = {
     [1962086868] = "https://raw.githubusercontent.com/sigilwd/KongerHub/main/toh.lua",
