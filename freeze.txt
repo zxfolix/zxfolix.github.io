@@ -1,0 +1,10 @@
+local gameLinks = {
+    [12355337193] = "loadstring(game:HttpGet("https://raw.githubusercontent.com/sigilwd/KongerHub/main/freeze.lua"))()",
+    [13771457545] = "loadstring(game:HttpGet("https://raw.githubusercontent.com/sigilwd/KongerHub/main/freeze.lua"))()",
+}
+
+if gameLinks[game.PlaceId] ~= nil then
+    loadstring(game:HttpGet(gameLinks[game.PlaceId]))()
+else
+    warn("Only works in MVSD Normal Server and Pro Server")
+end
