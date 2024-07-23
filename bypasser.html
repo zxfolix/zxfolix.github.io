@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folix's Bypasser</title>
+    <link rel="icon" type="image/x-icon" href="https://github.com/user-attachments/assets/268dec19-c66f-451d-bb90-000707ddc837">
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#AE7BC7">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light only" />
+    <meta name="description" content="Folix's Roblox Profanity Bypasser!" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:title" content="Folix's Bypasser" />
+    <meta property="og:type" content="https://zxfolix.github.io/bypasser" />
+    <meta property="og:description" content="Folix's Roblox Profanity Bypasser!" />
+    <meta property="og:image" content="https://github.com/user-attachments/assets/268dec19-c66f-451d-bb90-000707ddc837" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:url" content="https://zxfolix.github.io/bypasser" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            color: #e0e0e0;
+        }
+        .container {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            width: 350px;
+            max-width: 100%;
+        }
+        h1 {
+            color: #8e2de2;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+        input, textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #333;
+            color: #e0e0e0;
+        }
+        textarea[readonly] {
+            background-color: #222;
+            cursor: not-allowed;
+            height: 150px;
+        }
+        input:focus, textarea:focus {
+            border-color: #8e2de2;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Folix's Profanity Bypasser</h1>
+        <input type="text" id="inputBox" placeholder="Type here..." oninput="updateOutput()">
+        <textarea id="outputBox" readonly></textarea>
+    </div>
+
+    <script>
+        const replacementMap = {
+            'a': 'a', 'b': 'Ь', 'c': 'с', 'd': 'ԁ', 'e': 'е', 'f': 'f', 'g': 'ɡ', 'h': 'h',
+            'i': 'ı', 'j': 'j', 'k': 'κ', 'l': 'l', 'm': 'м', 'n': 'п', 'o': 'ο', 'p': 'ᴘ',
+            'q': 'q', 'r': 'г', 's': 's', 't': 'ᴛ', 'u': 'u', 'v': 'v', 'w': 'w', 'x': 'x',
+            'y': 'y', 'z': 'z', 'A': 'A', 'B': 'В', 'C': 'С', 'D': 'D', 'E': 'Е', 'F': 'F',
+            'G': 'Ԍ', 'H': 'H', 'I': 'Ɩ', 'J': 'J', 'K': 'K', 'L': 'L', 'M': 'M', 'N': 'N',
+            'O': 'O', 'P': 'Р', 'Q': 'Q', 'R': 'R', 'S': 'Ѕ', 'T': 'Т', 'U': 'U', 'V': 'V',
+            'W': 'W', 'X': 'X', 'Y': 'Y', 'Z': 'Z'
+        };
+
+        function updateOutput() {
+            const inputText = document.getElementById('inputBox').value;
+            let outputText = '';
+            for (let char of inputText) {
+                outputText += replacementMap[char] || char;
+            }
+            document.getElementById('outputBox').value = outputText;
+        }
+    </script>
+</body>
+</html>
